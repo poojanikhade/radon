@@ -29,6 +29,7 @@ function splitIntoChunk(arr, chunk) {
                           [5,8,4,6]);
  
      //console.log(merge);
+
 //problem 4-4
 
 var kvPairs = [['horror','The Shining'],['drama','Titanic'],['thriller','Shutter Island'],['fantasy','Pans Labyrinth']];
@@ -37,9 +38,9 @@ var result = lodash.fromPairs(kvPairs);
     
 
   const express = require('express');
-  //const externalModule = require('../logger/logger.js')
-  //const externalModule = require('../util/helper.js')
-  //const externalModule = require('../validator/formatter.js')
+  const externalModule = require('../logger/logger.js')
+  const externalModule = require('../util/helper.js')
+  const externalModule = require('../validator/formatter.js')
 
 const router = express.Router();
   
@@ -49,22 +50,20 @@ router.get('/hello',function (req,res){
     console.log(newArray);
     console.log(merge);
     console.log(kvPairs);
-     //console.log('The constant in logger route has a value '+externalModule.endpoint)
-    //console.log('The current batch is '+externalModule.batch)
-    //externalModule.welcome()
-    //console.log('The constant in util route has a value '+externalModule.printDate)
-    //console.log('The current printMonth is '+externalModule.printMonth)
-    //console.log('The current getBatchInfo is '+externalModule.getBatchInfo)
-    //externalModule.trim()
-    //externalModule.toLowerCase()
-    //externalModule.toUpperCase()
+     
+    externalModule.welcome()
+    console.log('The constant in util route has a value '+externalModule.printDate)
+    console.log('The current printMonth is '+externalModule.printMonth)
+    console.log('The current getBatchInfo is '+externalModule.getBatchInfo)
+    externalModule.trim()
+    externalModule.toLowerCase()
+    externalModule.toUpperCase()
 
    res.send('My first ever api!')
 })
  
 
-
-module.exports = router;
+ module.exports = router;
 // adding this comment for no reason 
 
 
