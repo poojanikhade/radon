@@ -1,6 +1,5 @@
 const express = require('express');
-
-// const router =express.router();
+const router =express.router();
 
 router.get('/movies',function (req,res){
     
@@ -15,19 +14,35 @@ router.get('/movies/:indexNumber',function (req,res){
     }
 });
 
-router.get('/movies',function (req,res){
+router.get('/movies/:indexNumber',function (req,res){
     
   res.send('My first ever api!')
 });
 
-router.get('/movies',function (req,res){
+router.get('/films',function (req,res){
+  const arrSring =[{
+    "id": 1,
+    "name": "The Shining"
+   }, {
+    "id": 2,
+    "name": "Incendies"
+   }, {
+    "id": 3,
+    "name": "Rang de Basanti"
+   }, {
+    "id": 4,
+    "name": "Finding Nemo"
+   }]
+   let f = arrSring[eeq.param.filmid -1]
+   if(f =arrSring.length){
+     res.send("no movies exists with this id")
+   }
+  
+});
+
+router.get('/films/:filmId',function (req,res){
     
   res.send('My first ever api!')
 });
 
-router.get('/movies',function (req,res){
-    
-  res.send('My first ever api!')
-});
- router =express.router();
 module.exports=router;
